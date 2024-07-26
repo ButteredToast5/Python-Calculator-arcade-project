@@ -1,0 +1,29 @@
+moreNumbers = True
+numberlist= []
+
+
+while moreNumbers:
+  number = int(input("Enter a number: "))
+  numberlist.append(number)
+  if number == -0:
+    moreNumbers = False
+    numberlist.remove(-0)
+    print()
+
+
+print("Here are the numbers you entered:", numberlist)
+print()
+
+operation = input("Enter an operation to add/div/sub/mult (all the numbers in the list): ")
+
+if operation =="add":
+  print("The sum of the numbers you entered is:", sum(numberlist))
+elif operation =="subtract":
+  print("The difference of the numbers you entered is:", numberlist[0] - sum(numberlist[1:]))
+elif operation =="multiply":
+  print("The product of the numbers you entered is:", numberlist[0] * sum(numberlist[1:]))
+elif operation =="divide":
+  print("The quotient of the numbers you entered is:", numberlist[0] / sum(numberlist[1:]))
+else operation = "skip"
+  print("Since you skipped would you rather add, subtract, multiply, or divide specific numbers?")
+  decision = input("Enter yes or no: ")
