@@ -1,0 +1,17 @@
+moreNumbers = True
+numberlist= []
+
+
+while moreNumbers:
+  number = int(input("Enter a number: "))
+  numberlist.append(number)
+  if number == -0:
+    moreNumbers = False
+    numberlist.remove(-0)
+    print()
+
+
+print("Here are the numbers you entered:", numberlist)
+print()
+
+operation = input("Enter an operation: ")
